@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import './styles.css';
+import React, { Component } from "react"
+import ReactDOM from "react-dom"
+import "./styles.css"
 
-class App extends Component{
-  constructor(props){
+class App extends Component {
+
+  constructor(props) {
     super(props)
 
     this.state = {
@@ -12,12 +13,12 @@ class App extends Component{
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     window.setTimeout(() => {
       this.setState({
         copo: 'suco'
       })
-    }, 2000)
+    }, 3000)
   }
 
   alterarCopo = () => {
@@ -26,8 +27,8 @@ class App extends Component{
     })
   }
 
-  render(){
-    const {clock, copo} = this.state
+  render() {
+    const { clock, copo } = this.state
     return (
       <div>
         <h1>{clock}</h1>
@@ -37,6 +38,5 @@ class App extends Component{
   }
 }
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById("root")
 ReactDOM.render(<App />, rootElement)
-
